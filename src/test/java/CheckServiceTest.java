@@ -46,18 +46,18 @@ public class CheckServiceTest {
 
     @Test(expected = UnsupportedOperationException.class)
     public void testMyMainMethodWithNegativeInputDataRepeats() {
-        CheckServiceTest.myMainMethod(data, -2);
+        CheckService.myMainMethod(data, -2);
     }
 
     @Test(expected = UnsupportedOperationException.class)
     public void testMyMainMethodWithZeroInputDataRepeats() {
-        CheckService.meth1(data, 0);
+        CheckService.myMainMethod(data, 0);
     }
 
     @Test(expected = Exception.class) //  бо тут я написав шо очікується ексершин
     public void testMyMainMethodOneWordWithDigitInString()  {
         data.add("Pasha1");
-        CheckService.meth1(data, 1); // очіку шо коли я буду викликати цей метод то буде ексепшин
+        CheckService.myMainMethod(data, 1); // очіку шо коли я буду викликати цей метод то буде ексепшин
     }
 
 }
