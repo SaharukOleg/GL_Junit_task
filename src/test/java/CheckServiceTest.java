@@ -54,5 +54,10 @@ public class CheckServiceTest {
         CheckService.meth1(data, 0);
     }
 
+    @Test(expected = Exception.class) //  бо тут я написав шо очікується ексершин
+    public void testMyMainMethodOneWordWithDigitInString()  {
+        data.add("Pasha1");
+        CheckService.meth1(data, 1); // очіку шо коли я буду викликати цей метод то буде ексепшин
+    }
 
 }
