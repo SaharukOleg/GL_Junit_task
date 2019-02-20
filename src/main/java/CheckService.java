@@ -16,7 +16,6 @@ public class CheckService {
             for (String inputData : data) {
                 if (x.equals(inputData)) {
                     counter++;
-                    counter++;
                     //System.out.println(x + " counter - :" + counter);
                 }
             }
@@ -43,4 +42,6 @@ public class CheckService {
     private static boolean checkIfContainsDigit(String word) {
         return word.matches(".*\\d+.*");
     }
+
+
 }
