@@ -44,5 +44,15 @@ public class CheckServiceTest {
         CheckService.myMainMethod(data, intData);
     }
 
+    @Test(expected = UnsupportedOperationException.class)
+    public void testMyMainMethodWithNegativeInputDataRepeats() {
+        CheckServiceTest.myMainMethod(data, -2);
+    }
+
+    @Test(expected = UnsupportedOperationException.class)
+    public void testMyMainMethodWithZeroInputDataRepeats() {
+        CheckService.meth1(data, 0);
+    }
+
 
 }
